@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE FACE DIGITAL FUTURE</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+        
+        .header { background-color: #fff; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .header img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #d32f2f; }
+        .header h1 { font-size: 20px; color: #333; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .container { padding: 15px; max-width: 800px; margin: 0 auto; }
+        .section-title { font-size: 18px; color: #555; margin-bottom: 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; }
+        
+        /* Product Card */
+        .product-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; transition: 0.3s; }
+        .product-card:hover { box-shadow: 0 4px 10px rgba(0,0,0,0.15); transform: translateY(-3px); }
+        .product-image { width: 100%; height: 120px; object-fit: contain; margin-bottom: 10px; }
+        .product-title { font-size: 14px; color: #333; margin: 0 0 10px 0; height: 40px; overflow: hidden; font-weight: bold; }
+        
+        /* මිල ගණන් සහ ඩිස්කවුන්ට් බැජ් එකේ ඩිසයින් */
+        .price-row { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 5px; }
+        .old-price { text-decoration: line-through; color: #888; font-size: 13px; }
+        .discount-badge { background-color: #d32f2f; color: white; font-size: 11px; font-weight: bold; padding: 2px 6px; border-radius: 4px; }
+        .new-price { color: #d32f2f; font-size: 18px; font-weight: bold; margin: 5px 0 10px 0; }
+        
+        .view-btn { background-color: #007BFF; color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; display: inline-block; }
+
+        /* Popup Modal */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); }
+        .modal-content { background-color: #fff; margin: 20% auto; padding: 20px; border-radius: 10px; width: 85%; max-width: 400px; text-align: center; position: relative; animation: slideDown 0.3s ease; }
+        @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .close { position: absolute; right: 15px; top: 10px; font-size: 28px; font-weight: bold; color: #888; cursor: pointer; }
+        .close:hover { color: red; }
+        
+        .modal-desc { font-size: 14px; color: #555; text-align: left; background: #f9f9f9; padding: 10px; border-radius: 5px; margin: 15px 0; line-height: 1.5; }
+        
+        .whatsapp-btn { background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: block; margin-top: 10px; font-size: 16px; }
+        
+        .footer { background-color: #1a1a1a; color: #fff; text-align: center; padding: 25px 10px; margin-top: 40px; }
+        .flag { font-size: 24px; margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://i.ibb.co/fYdc4Ngz/Use-background-is-202604181359.jpg" alt="Logo">
+        <h1>ONE FACE DIGITAL FUTURE</h1>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Premium Software & Accounts</h2>
+        <div class="product-grid">
+
+<div class="product-card" onclick="openModal('Gemini AI Pro 12 Months', 'Rs. 77,100', '93% OFF', 'Rs. 5,300', 'Google One AI Premium Gemini 3.1 Pro ✅<br> <br>5TB Storage ✅<br> <br>1000 AI Credits Monthly X 12 ✅<br> <br>Gemini Advanced Access✅<br><br>100% Private Account✅ <br><br> NotebookLM✅ <br><br>Highest limits to AI Filmmaking tool with access to Veo 3.1✅', 'https://i.ibb.co/ks72MQ4Y/20260421-174523.jpg', 'Hello, I want to buy Gemini AI Pro 12 Months')">
+                <img src="https://i.ibb.co/ks72MQ4Y/20260421-174523.jpg" alt="Gemini" class="product-image">
+                <p class="product-title">Gemini AI Pro 12 Months</p>
+                <div class="price-row">
+                    <span class="old-price">Rs. 77,100</span>
+                    <span class="discount-badge">93% OFF</span>
+                </div>
+                <div class="new-price">Rs. 5,300</div>
+                <div class="view-btn">View Details</div>
+            </div>            
+            
+
+            <div class="product-card" onclick="openModal('YouTube Premium 6 Months', 'Rs. 29,999', '87% OFF', 'Rs. 3,899', '100% Private Account ✅.<br>Add Free YouTube Videos ✅. <br>Background Play Video & Music ✅.<br>YouTube Music Premium ✅. <br>Download and Play Videos ✅.<br>Full Warranty 🛡️.', 'https://iconape.com/wp-content/png_logo_vector/youtube-premium-logo.png', 'Hello, I want to buy YouTube Premium 6 Months')">
+                <img src="https://iconape.com/wp-content/png_logo_vector/youtube-premium-logo.png" alt="YouTube" class="product-image">
+                <p class="product-title">YouTube Premium 6 Months</p>
+                <div class="price-row">
+                    <span class="old-price">Rs. 29,999</span>
+                    <span class="discount-badge">87% OFF</span>
+                </div>
+                <div class="new-price">Rs. 3,899</div>
+                <div class="view-btn">View Details</div>
+            </div>
+
+            <div class="product-card" onclick="openModal('CapCut Pro 01 Months', 'Rs. 2,500', '60.04% OFF', 'Rs. 999', 'Unlock all premium features ✅.<br>No watermarks ✅.<br>4K Export & AI tools ✅.<br>Works on Windows/Mac/Mobile ✅ <br>Full Warranty 🛡️.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJIHvVYBftntoAVzZLIq3fPyfIQkhuOzLuMD_3p_OzFjkX3V4PsE7t094&s=10', 'Hello, I want to buy CapCut Pro 01 Months')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJIHvVYBftntoAVzZLIq3fPyfIQkhuOzLuMD_3p_OzFjkX3V4PsE7t094&s=10" alt="CapCut" class="product-image">
+                <p class="product-title">CapCut Pro 01 Months</p>
+                <div class="price-row">
+                    <span class="old-price">Rs. 2,500</span>
+                    <span class="discount-badge">60.04% OFF</span>
+                </div>
+                <div class="new-price">Rs. 999</div>
+                <div class="view-btn">View Details</div>
+            </div>
+            
+            <div class="product-card" onclick="openModal('CapCut Pro 06 Months', 'Rs.15,000 ', '76.67% OFF', 'Rs. 3,499', 'Unlock all premium features ✅.<br>No watermarks ✅.<br>4K Export & AI tools ✅.<br>Works on Windows/Mac/Mobile ✅ <br>Full Warranty 🛡️.', 'https://i0.wp.com/4keyplus.com/wp-content/uploads/2025/05/photo_%D9%A2%D9%A0%D9%A2%D9%A5-%D9%A0%D9%A5-%D9%A0%D9%A1_%D9%A0%D9%A1-%D9%A3%D9%A6-%D9%A4%D9%A1.jpg', 'Hello, I want to buy CapCut Pro 06 Months')">
+                <img src="https://i0.wp.com/4keyplus.com/wp-content/uploads/2025/05/photo_%D9%A2%D9%A0%D9%A2%D9%A5-%D9%A0%D9%A5-%D9%A0%D9%A1_%D9%A0%D9%A1-%D9%A3%D9%A6-%D9%A4%D9%A1.jpg" alt="CapCut" class="product-image">
+                <p class="product-title">CapCut Pro 06 Months</p>
+                <div class="price-row">
+                    <span class="old-price">Rs. 15,000</span>
+                    <span class="discount-badge">76.67% OFF</span>
+                </div>
+                <div class="new-price">Rs. 3,499</div>
+                <div class="view-btn">View Details</div>
+            </div>
+            
+            <div class="product-card" onclick="openModal('Canva Premium 12 Months', 'Rs.4,999 ', '80% OFF', 'Rs. 999', 'Unlock all premium features ✅ <br>Full Warranty 🛡️.', 'https://macrosoft.store/1587-large_default/canva-pro.jpg', 'Hello, I want to buy Canva Premium 12 Months')">
+                <img src="https://macrosoft.store/1587-large_default/canva-pro.jpg" alt="CapCut" class="product-image">
+                <p class="product-title">Canva Premium 12 Months</p>
+                <div class="price-row">
+                    <span class="old-price">Rs. 3,499</span>
+                    <span class="discount-badge">80% OFF</span>
+                </div>
+                <div class="new-price">Rs. 999</div>
+                <div class="view-btn">View Details</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" style="width:100px; height:100px; object-fit:contain; margin-bottom:10px;">
+            <h2 id="modalTitle" style="margin:0; font-size: 18px;"></h2>
+            
+            <div class="price-row" style="margin-top: 10px;">
+                <span id="modalOldPrice" class="old-price"></span>
+                <span id="modalDiscount" class="discount-badge"></span>
+            </div>
+            <div id="modalNewPrice" class="new-price"></div>
+            
+            <div id="modalDesc" class="modal-desc"></div>
+            <a id="modalBuyBtn" href="" target="_blank" class="whatsapp-btn">🛒 Buy Now via WhatsApp</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="flag">🇱🇰</div>
+        <p><strong>ONE FACE DIGITAL FUTURE</strong></p>
+        <p>ONE FACE DIGITAL</p>
+        <p>Contact: +94 76 030 8163</p>
+        <br>
+        <p style="font-size: 12px; color: #888;">© 2022-2026 ONE FACE DIGITAL FUTURE. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        // දැන් discount එකත් මෙතනට එනවා
+        function openModal(title, oldPrice, discount, newPrice, desc, imgSrc, waText) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalOldPrice').innerText = oldPrice;
+            document.getElementById('modalDiscount').innerText = discount; // අලුතින් ආපු කෑල්ල
+            document.getElementById('modalNewPrice').innerText = newPrice;
+            document.getElementById('modalDesc').innerHTML = desc;
+            document.getElementById('modalImg').src = imgSrc;
+            
+            let phone = "94760308163";
+            let waLink = `https://wa.me/${phone}?text=${encodeURIComponent(waText)}`;
+            document.getElementById('modalBuyBtn').href = waLink;
+            
+            document.getElementById('productModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('productModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
