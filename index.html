@@ -22,7 +22,7 @@
         .product-image { width: 100%; height: 120px; object-fit: contain; margin-bottom: 10px; }
         .product-title { font-size: 14px; color: #333; margin: 0 0 10px 0; height: 40px; overflow: hidden; font-weight: bold; }
         
-        /* මිල ගණන් සහ ඩිස්කවුන්ට් බැජ් එකේ ඩිසයින් */
+        /* Price & Discount */
         .price-row { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 5px; }
         .old-price { text-decoration: line-through; color: #888; font-size: 13px; }
         .discount-badge { background-color: #d32f2f; color: white; font-size: 11px; font-weight: bold; padding: 2px 6px; border-radius: 4px; }
@@ -40,6 +40,57 @@
         .modal-desc { font-size: 14px; color: #555; text-align: left; background: #f9f9f9; padding: 10px; border-radius: 5px; margin: 15px 0; line-height: 1.5; }
         
         .whatsapp-btn { background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: block; margin-top: 10px; font-size: 16px; }
+
+        /* Customer Feedback Marquee Styles */
+        .feedback-section { margin: 40px auto; max-width: 800px; overflow: hidden; }
+        .feedback-title { font-size: 18px; color: #555; margin-bottom: 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px; padding-left: 15px; }
+        
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 10px 0;
+            /* Copy කරන්න බැරි වෙන්න මේ ටික දාලා තියෙන්නේ */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .marquee-track {
+            display: inline-block;
+            animation: scroll-left 30s linear infinite;
+        }
+        
+        /* Hover කරාම සහ Touch කරාම නතර වෙන්න */
+        .marquee-container:hover .marquee-track,
+        .marquee-container:active .marquee-track {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .feedback-card {
+            display: inline-block;
+            background: #fff;
+            border-left: 4px solid #007BFF;
+            border-radius: 6px;
+            padding: 12px 15px;
+            margin: 0 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            width: 250px;
+            white-space: normal;
+            vertical-align: top;
+        }
+
+        .stars { color: #FFD700; font-size: 16px; margin-bottom: 5px; letter-spacing: 2px; }
+        .feedback-text { font-size: 13px; color: #444; font-style: italic; line-height: 1.4; margin-bottom: 8px; }
+        .customer-name { font-size: 12px; color: #888; font-weight: bold; }
         
         .footer { background-color: #1a1a1a; color: #fff; text-align: center; padding: 25px 10px; margin-top: 40px; }
         .flag { font-size: 24px; margin-bottom: 10px;}
@@ -56,7 +107,7 @@
         <h2 class="section-title">Premium Software & Accounts</h2>
         <div class="product-grid">
 
-<div class="product-card" onclick="openModal('Gemini AI Pro 12 Months', 'Rs. 77,100', '94.9% OFF', 'Rs 3,999', 'Google One AI Premium Gemini 3.1 Pro ✅<br> <br>5TB Storage ✅<br> <br>1000 AI Credits Monthly X 12 ✅<br> <br>Gemini Advanced Access✅<br><br>100% Private Account✅ <br><br> NotebookLM✅ <br><br>Highest limits to AI Filmmaking tool with access to Veo 3.1✅', 'https://i.ibb.co/ks72MQ4Y/20260421-174523.jpg', 'Hello, I want to buy Gemini AI Pro 12 Months')">
+            <div class="product-card" onclick="openModal('Gemini AI Pro 12 Months', 'Rs. 77,100', '94.9% OFF', 'Rs 3,999', 'Google One AI Premium Gemini 3.1 Pro ✅<br> <br>5TB Storage ✅<br> <br>1000 AI Credits Monthly X 12 ✅<br> <br>Gemini Advanced Access✅<br><br>100% Private Account✅ <br><br> NotebookLM✅ <br><br>Highest limits to AI Filmmaking tool with access to Veo 3.1✅', 'https://i.ibb.co/ks72MQ4Y/20260421-174523.jpg', 'Hello, I want to buy Gemini AI Pro 12 Months')">
                 <img src="https://i.ibb.co/ks72MQ4Y/20260421-174523.jpg" alt="Gemini" class="product-image">
                 <p class="product-title">Gemini AI Pro 12 Months</p>
                 <div class="price-row">
@@ -67,7 +118,6 @@
                 <div class="view-btn">View Details</div>
             </div>            
             
-
             <div class="product-card" onclick="openModal('YouTube Premium 6 Months', 'Rs. 29,999', '87% OFF', 'Rs. 3,899', '100% Private Account ✅.<br>Add Free YouTube Videos ✅. <br>Background Play Video & Music ✅.<br>YouTube Music Premium ✅. <br>Download and Play Videos ✅.<br>Full Warranty 🛡️.', 'https://iconape.com/wp-content/png_logo_vector/youtube-premium-logo.png', 'Hello, I want to buy YouTube Premium 6 Months')">
                 <img src="https://iconape.com/wp-content/png_logo_vector/youtube-premium-logo.png" alt="YouTube" class="product-image">
                 <p class="product-title">YouTube Premium 6 Months</p>
@@ -102,7 +152,7 @@
             </div>
             
             <div class="product-card" onclick="openModal('Canva Premium 12 Months', 'Rs.4,999 ', '80% OFF', 'Rs. 999', 'Unlock all premium features ✅ <br>Full Warranty 🛡️.', 'https://macrosoft.store/1587-large_default/canva-pro.jpg', 'Hello, I want to buy Canva Premium 12 Months')">
-                <img src="https://macrosoft.store/1587-large_default/canva-pro.jpg" alt="CapCut" class="product-image">
+                <img src="https://macrosoft.store/1587-large_default/canva-pro.jpg" alt="Canva" class="product-image">
                 <p class="product-title">Canva Premium 12 Months</p>
                 <div class="price-row">
                     <span class="old-price">Rs. 3,499</span>
@@ -112,6 +162,41 @@
                 <div class="view-btn">View Details</div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <h2 class="feedback-title">Customer Reviews</h2>
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <script>
+                    const reviews = [
+                        { text: "100% Trusted seller. Got my YouTube Premium instantly. Highly recommended!", name: "- Kasun Perera" },
+                        { text: "Gemini AI pro account eka supiriyata wada. Fast delivery. Thanks brother.", name: "- Nimesh Lakshan" },
+                        { text: "CapCut Pro 6 months eka gaththa. Kisim awulak na, PC ekatath wada.", name: "- Dasun Madushanka" },
+                        { text: "Canva premium eka salli daala vinadi 2n hambuna. Supiri service eka.", name: "- Tharindu Silva" },
+                        { text: "Best digital software service in Sri Lanka. Low price & excellent support.", name: "- Kavindu Bandara" },
+                        { text: "YouTube Premium eka add-free wada karanawa. Gaththa ganata watinawa.", name: "- Malithi Fernando" },
+                        { text: "Very friendly communication. Bought CapCut Pro and works perfectly.", name: "- Asanka Kumara" },
+                        { text: "Pattama service eka. Kianna waradak na. Digatama gannawa.", name: "- Nuwan Pradeep" },
+                        { text: "Gemini Advanced eka gaththa, wadeta niyamai. 100% Safe.", name: "- Lahiru Roshan" },
+                        { text: "Great after-sales service. Had a small issue and he fixed it immediately.", name: "- Supun Chathuranga" }
+                    ];
+
+                    // Reviews දෙපාරක් Print කරනවා Infinite Scroll එකට
+                    for (let i = 0; i < 2; i++) {
+                        reviews.forEach(review => {
+                            document.write(`
+                                <div class="feedback-card">
+                                    <div class="stars">★★★★★</div>
+                                    <div class="feedback-text">"${review.text}"</div>
+                                    <div class="customer-name">${review.name}</div>
+                                </div>
+                            `);
+                        });
+                    }
+                </script>
+            </div>
         </div>
     </div>
 
@@ -142,11 +227,10 @@
     </div>
 
     <script>
-        // දැන් discount එකත් මෙතනට එනවා
         function openModal(title, oldPrice, discount, newPrice, desc, imgSrc, waText) {
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalOldPrice').innerText = oldPrice;
-            document.getElementById('modalDiscount').innerText = discount; // අලුතින් ආපු කෑල්ල
+            document.getElementById('modalDiscount').innerText = discount; 
             document.getElementById('modalNewPrice').innerText = newPrice;
             document.getElementById('modalDesc').innerHTML = desc;
             document.getElementById('modalImg').src = imgSrc;
